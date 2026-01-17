@@ -1,1 +1,96 @@
-# Lab-7-Uniform_Cost_Search
+# Uniform-Cost Search (UCS) Professional Lab
+
+## Overview
+
+This comprehensive lab explores Uniform-Cost Search (UCS), a fundamental graph traversal algorithm that finds the least-cost path from a starting node to a goal node in weighted graphs. UCS is particularly valuable in industry applications where path costs vary and optimal solutions are critical.
+
+## Learning Objectives
+
+- Understand UCS theoretical foundations and mathematical properties
+- Implement efficient UCS using priority queues
+- Apply UCS to real-world optimization problems
+- Analyze performance characteristics and trade-offs
+- Compare UCS with other search algorithms (BFS, DFS, A*)
+
+## Prerequisites
+
+- Python 3.8+
+- Understanding of graph data structures
+- Basic knowledge of priority queues
+- Familiarity with algorithm complexity analysis
+
+## Lab Structure
+
+### Part 1: Theoretical Foundations
+- UCS algorithm definition and properties
+- Mathematical proof of optimality
+- Complexity analysis
+- Comparison with other search strategies
+
+### Part 2: Core Implementation
+- Priority queue-based UCS implementation
+- Graph representation strategies
+- Path reconstruction techniques
+- Memory optimization approaches
+
+### Part 3: Industry Applications
+- Network routing optimization
+- Logistics and supply chain pathfinding
+- Resource allocation problems
+- Cost-sensitive decision making
+
+### Part 4: Performance Analysis
+- Benchmarking against other algorithms
+- Scalability testing
+- Memory usage profiling
+- Real-time performance considerations
+
+### Part 5: Advanced Topics
+- Heuristic-enhanced UCS (A* connection)
+- Dynamic cost updates
+- Multi-objective optimization
+- Parallel UCS implementations
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+```python
+from uniform_cost_search import UniformCostSearch, Graph
+
+# Create a graph
+graph = Graph()
+graph.add_edge('A', 'B', cost=5)
+graph.add_edge('B', 'C', cost=3)
+graph.add_edge('A', 'C', cost=10)
+
+# Run UCS
+ucs = UniformCostSearch(graph)
+path, cost = ucs.search('A', 'C')
+print(f"Path: {path}, Cost: {cost}")
+```
+
+## Industry Case Studies
+
+1. **Network Routing**: OSPF protocol implementation
+2. **Logistics Optimization**: Delivery route planning
+3. **Resource Management**: Cloud computing resource allocation
+4. **Transportation**: Urban traffic flow optimization
+
+## Performance Benchmarks
+
+- Time complexity: O(b^(1+C*/ε)) where b is branching factor, C* is optimal solution cost, ε is minimum step cost
+- Space complexity: O(b^(1+C*/ε))
+- Optimality: Guaranteed to find least-cost path
+
+## Contributing
+
+This lab is designed for professional development and academic use. Contributions for additional use cases and optimizations are welcome.
+
+## License
+
+MIT License - see LICENSE file for details.
